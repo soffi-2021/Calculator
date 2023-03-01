@@ -89,6 +89,7 @@ def evaluateExpression(expression):
         >>> evaluateExpression("2 * (3 + 4) / 0")
         'ERROR'
 
+        
     """
     try:
         result = str(eval(expression, {}, {}))
