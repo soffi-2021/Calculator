@@ -74,7 +74,22 @@ class PyCalcWindow(QMainWindow):
 
 
 def evaluateExpression(expression):
-    """Evaluate an expression (Model)."""
+    """Evaluate the given mathematical expression.
+
+    Args:
+        expression: A string representing the mathematical expression to be evaluated.
+
+    Returns:
+        A string representing the evaluated result or an error message if there's any error during the evaluation.
+
+    Examples:
+        >>> evaluateExpression("1 + 2")
+        '3'
+
+        >>> evaluateExpression("2 * (3 + 4) / 0")
+        'ERROR'
+
+    """
     try:
         result = str(eval(expression, {}, {}))
     except Exception:
@@ -123,4 +138,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-   
+
